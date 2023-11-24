@@ -1,7 +1,13 @@
+var bandera = false;
+
 function validar(){
+    if (bandera) {
+        console.log("validacion completa")
+    }
+    
+}
+function correrCaptcha(){
+    console.log("se resolvio")
+    bandera = true;
 
-    alert($("#name").val());
-
-    var pass = document.getElementById("password");
-    alert(pass.value);
 }

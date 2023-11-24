@@ -9,21 +9,11 @@
 <body>
     <input type="text" name="nombre" id="name">
     <input type="text" name="password" id="contraseña">
-    <button id="enter">entrar</button> 
-    <div class="g-rechaptcha"
-    data-sitekey="6Lf4mxopAAAAAH5WQidpAVQgczA0Tcew64NWEiYd"
-    data-caliblack="correctCaptcha"></div>   
+    <button id="enter" onclick="validar()">entrar</button> 
+    <div class="g-rechaptcha" data-sitekey="6Lf4mxopAAAAAH5WQidpAVQgczA0Tcew64NWEiYd" data-caliblack="correctCaptcha"></div>   
 
     <script src="index.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="https://www.google.com/recaptcha/api.js"></script>
-    <script src="https://www.google.com/recaptcha/enterprise.js?render=6Lf4mxopAAAAAH5WQidpAVQgczA0Tcew64NWEiYd" async defer></script>
-    <script>
-        function onClick(e) {
-          e.preventDefault();
-          grecaptcha.enterprise.ready(async () => {
-            const token = await grecaptcha.enterprise.execute('6Lf4mxopAAAAAH5WQidpAVQgczA0Tcew64NWEiYd', {action: 'LOGIN'});
-          });
-        }
       </script>
     </html>
